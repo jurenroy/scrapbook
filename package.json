@@ -1,8 +1,8 @@
 {
-  "homepage": "https://jurenroy.github.io/scrapbook",
   "name": "scrapbook",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jurenroy.github.io/scrapbook",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -44,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
