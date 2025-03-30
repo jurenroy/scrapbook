@@ -1,0 +1,94 @@
+.image-card {
+  width: 100%; /* Width of the card */
+  height: 50vh; /* Height of the card */
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-rows: 1fr 1fr; /* Two rows */
+  gap: 5px; /* Space between items */
+  overflow: visible;
+}
+
+.image-item {
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* For positioning the text */
+  overflow: hidden; /* Hide overflow */
+}
+
+.image-item:hover {
+  transform: scale(2); /* Scale effect on hover */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  z-index: 10;
+}
+
+.image-item img {
+  width: 100%; /* Make image fill the item */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Match the border radius */
+}
+
+.image-item--1 {
+  background: #000000; /* Background color for item 1 */
+}
+
+.image-item--2 {
+  background: #000000; /* Background color for item 2 */
+}
+
+.image-item--3 {
+  background: #000000; /* Background color for item 3 */
+}
+
+.image-item--4 {
+  background: #000000; /* Background color for item 4 */
+}
+
+.quantity {
+  font-size: 25px;
+  font-weight: 600;
+  position: absolute; /* Positioning for overlay */
+  bottom: 30px; /* Position from the bottom */
+}
+
+.text {
+  font-size: 12px;
+  font-family: inherit;
+  font-weight: 600;
+  position: absolute; /* Positioning for overlay */
+  bottom: 10px; /* Position from the bottom */
+}
+
+.text--1 {
+  color: rgba(149, 149, 255, 1);
+}
+
+.text--2 {
+  color: rgba(252, 161, 71, 1);
+}
+
+.text--3 {
+  color: rgba(66, 193, 110, 1);
+}
+
+.text--4 {
+  color: rgba(220, 91, 183, 1);
+}
+
+
+/* Media query for mobile */
+@media screen and (max-width: 768px) {
+  .image-item {
+    width: 200px; /* Set width to 250px on mobile */
+    height: auto;
+  }
+
+  .image-card {
+    grid-template-columns: 1fr; /* Stack the items in one column */
+  }
+}

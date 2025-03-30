@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import FrontPage from './pages/FrontPage';
+import ContentPage from './pages/ContentPage';
+import EndPage from './pages/EndPage';
+import './styles/App.css';
 
-function App() {
+const App = () => {
+  const [currentPage, setCurrentPage] = useState('front');
+
+  const goToPage = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {currentPage === 'front' && <FrontPage goToPage={goToPage} />}
+      {currentPage === 'content' && <ContentPage goToPage={goToPage} />}
+      {currentPage === 'end' && <EndPage goToPage={goToPage} />}
     </div>
   );
-}
+};
 
 export default App;

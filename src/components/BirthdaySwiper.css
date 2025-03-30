@@ -1,0 +1,55 @@
+.birthday-swiper-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; /* Stack vertically on mobile */
+  }
+  
+  .swiper-section {
+    margin: 20px 0; /* Space between sections */
+    text-align: center;
+  }
+  .swiper-section.active {
+    border: 1px solid rgb(0, 0, 0); /* Solid black border for active section */
+    border-radius: 10px;
+  }
+  
+  .swiper {
+    width: auto;
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .swiper img {
+    width: auto;
+    height: 30vh;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+  }
+  /* Styles for dot indicators */
+.dot-indicators {
+    display: flex;
+    justify-content: center; /* Center the dots */
+    margin-top: 10px; /* Space above the dots */
+  }
+  
+  .dot {
+    width: 10px; /* Width of the dot */
+    height: 10px; /* Height of the dot */
+    margin: 0 5px; /* Space between dots */
+    border-radius: 50%; /* Make it circular */
+    background-color: lightgray; /* Default color for inactive dots */
+    transition: background-color 0.3s; /* Smooth transition for color change */
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: black; /* Color for the active dot */
+  }
+
+  @media screen and (max-width: 768px) {
+    .swiper-section.active {
+        border: none;
+        border-radius: 10px;
+      }
+  }

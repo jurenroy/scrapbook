@@ -1,0 +1,92 @@
+.adventure-cards {
+    position: relative;
+    width: 300px; /* Define a container width */
+    height: 50vh; /* Define a container height */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .adventure-card {
+    position: absolute; /* Use absolute positioning for stacking */
+    width: 250px;
+    height: 290px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f3f3f3; /* Base color when image is not visible */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .adventure-card:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+    z-index: 10; /* Bring hovered card to front */
+  }
+  
+  .adventure-card-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .adventure-card:hover .adventure-card-image {
+    opacity: 1; /* Show image on hover */
+  }
+  
+  .adventure-card-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .adventure-card-header {
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Reversed position with card 6 on top at bottom right, card 1 at bottom of stack at top left */
+  .adventure-card--6 {
+    top: 130px;
+    left: 130px;
+    z-index: 6;
+  }
+  
+  .adventure-card--5 {
+    top: 110px;
+    left: 110px;
+    z-index: 5;
+  }
+  
+  .adventure-card--4 {
+    top: 90px;
+    left: 90px;
+    z-index: 4;
+  }
+  
+  .adventure-card--3 {
+    top: 70px;
+    left: 70px;
+    z-index: 3;
+  }
+  
+  .adventure-card--2 {
+    top: 50px;
+    left: 50px;
+    z-index: 2;
+  }
+  
+  .adventure-card--1 {
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+  }

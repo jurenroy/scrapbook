@@ -1,0 +1,68 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background: lightgrey;
+  }
+  
+  .yellow-btn {
+    width: 300px;
+    height: 150px;
+    margin: 15px;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 0, 1) 0%, /* Yellow */
+      rgba(255, 255, 255, 1) 100% /* White */
+    );
+    color: black; /* Change text color to black for better contrast */
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.5s;
+  }
+  
+  .blue-btn {
+    width: 300px;
+    height: 150px;
+    margin: 15px;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 255, 1) 0%, /* Blue */
+      rgba(0, 0, 0, 1) 100% /* Black */
+    );
+    color: white; /* Keep text color white for contrast */
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  button:hover {
+    color: rgb(255, 255, 255); /* Change text color on hover */
+  }
+  
+  button:after {
+    content: "";
+    background: rgb(255, 0, 0);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+  }
+  
+  button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    transition: all 0.5s;
+  }

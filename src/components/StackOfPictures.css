@@ -1,0 +1,41 @@
+.stack-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Hide overflow for falling effect */
+  height: 50vh;
+}
+
+button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.falling-images {
+  width: 400px; /* Ensure it takes full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.falling-image {
+  width: 200px; /* Adjust as needed */
+  border-radius: 10px;
+  opacity: 0; /* Start invisible */
+  animation: fall 1s forwards; /* Animation for falling effect */
+  position: absolute;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-300%); /* Start from above */
+    opacity: 1; /* Start invisible */
+  }
+  100% {
+    transform: translateY(0); /* End at original position */
+    opacity: 0; /* End visible */
+  }
+}

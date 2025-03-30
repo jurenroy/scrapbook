@@ -1,0 +1,120 @@
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.App {
+  text-align: center;
+}
+
+.front-page {
+  background-color: #00c3ff; /* Light blue background */
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.content-page {
+  background-color: #00c3ff; /* White background for content */
+  padding: 20px;
+  border: none; /* Remove border */
+  border-radius: 0; /* Remove border radius */
+  box-shadow: none; /* Remove shadow */
+  height: 99vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  position: relative;
+}
+
+.end-page {
+  background-color: #00c3ff; /* Red background for end page */
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000; /* Button color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #000000; /* Darker button color on hover */
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.entry {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.navigation {
+  margin: 20px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.navigation button {
+  margin: 20 10px;
+  
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .front-page, .end-page {
+    font-size: 1.2em;
+  }
+
+  .content-page {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .entry {
+    padding: 10px;
+  }
+}
